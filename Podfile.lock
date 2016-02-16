@@ -34,22 +34,19 @@ PODS:
   - CWFoundation/Utilities (0.0.5):
     - CWFoundation/Foundation+CWAdditions
   - CWStackController (0.0.3)
-  - FLAnimatedImage (1.0.8)
-  - FMDB (2.5):
-    - FMDB/standard (= 2.5)
-  - FMDB/common (2.5)
-  - FMDB/standard (2.5):
-    - FMDB/common
+  - FLAnimatedImage (1.0.10)
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
   - hpple (0.2.0)
-  - JDStatusBarNotification (1.5.2)
-  - pop (1.0.7)
+  - JDStatusBarNotification (1.5.3)
+  - pop (1.0.9)
 
 DEPENDENCIES:
-  - AFNetworking
+  - AFNetworking (= 2.5.4)
   - CocoaLumberjack (= 1.9.2)
   - CWFoundation (from `https://github.com/guojiubo/CWFoundation.git`, commit `2352449291499091f4e4a82877ec57c9070ced35`)
-  - CWStackController (from `https://github.com/guojiubo/CWStackController.git`, commit
-    `8ff182c2f4e6b4cc31b9357f2a31f6bde456ef87`)
+  - CWStackController (from `https://github.com/guojiubo/CWStackController.git`, commit `8ff182c2f4e6b4cc31b9357f2a31f6bde456ef87`)
   - FLAnimatedImage
   - FMDB
   - hpple
@@ -77,10 +74,12 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
   CWFoundation: ac66e6b36df27d5f059568b1f2740b7b7730695c
   CWStackController: 3ca7386728b4132ca65a1862a5ccfa76f35fdb10
-  FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  FLAnimatedImage: e16a1e1cef08e4c509b47e4acbe3923f65c16135
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
-  JDStatusBarNotification: a36d09ccbb047217572b074a61e7ca10dddc5f0a
-  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  JDStatusBarNotification: 29413865af11c862c17180610b0f46a21118b412
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 2514803f73575e9e30c7c4f4d7a0ff421ab39a19
+
+COCOAPODS: 1.0.0.beta.3

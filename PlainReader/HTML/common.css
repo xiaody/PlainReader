@@ -2,9 +2,9 @@ html {
     -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 body {
+    padding: 5px;
     word-break: break-all;
     font-family: HelveticaNeue;
-    padding:5px;
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     body {
@@ -64,4 +64,7 @@ div.videoForbidden {
     background-size: 62px 62px;
     background-repeat: no-repeat;
     background-position: center;
+}
+iframe.tigerstock { /* block this ad*/
+  display: none;
 }

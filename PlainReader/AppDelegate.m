@@ -35,23 +35,23 @@ NSString *const AppDelegateSideMenuDidTriggerHideNotification = @"AppDelegateSid
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [PRLogger setup];
-    
+
     [[PRDatabase sharedDatabase] prepareDatabase];
-    
+
     [NSURLCache setSharedURLCache:[[PRURLCache alloc] init]];
     [NSURLProtocol registerClass:[PRHTTPURLProtocol class]];
     [NSURLProtocol registerClass:[PRCustomURLProtocol class]];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    [[CWObjectCache sharedCache] setMaxCacheSize:1024 * 1024 * 256];
-        
+    [[CWObjectCache sharedCache] setMaxCacheSize:1024 * 1024 * 64];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-    
+
     PRRealtimeViewController *realtime = [PRRealtimeViewController cw_loadFromNibUsingClassName];
     LeftMenuViewController *leftMenu = [LeftMenuViewController cw_loadFromNibUsingClassName];
     PRStackController *stackController = [[PRStackController alloc] initWithRootViewController:realtime];
-    
+
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:stackController leftMenuViewController:leftMenu rightMenuViewController:nil];
     sideMenu.delegate = self;
     sideMenu.panFromEdge = NO;
@@ -60,18 +60,18 @@ NSString *const AppDelegateSideMenuDidTriggerHideNotification = @"AppDelegateSid
     sideMenu.scaleBackgroundImageView = NO;
     sideMenu.scaleContentView = NO;
     sideMenu.scaleMenuView = NO;
-    
+
     [self.window setRootViewController:sideMenu];
     [self.window setBackgroundColor:[UIColor whiteColor]];
-        
+
 #ifdef DEBUG
 //    [[PRActivityMonitor sharedMonitor] start];
 #endif
-    
+
     [[PRAppearanceManager sharedManager] setup];
-    
+
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 
